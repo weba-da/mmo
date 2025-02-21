@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MMORPG Fantasía Medieval - Galería</title>
+  <link rel="stylesheet" href="/style.css"/>
+  <script>
+    // Script básico para Lightbox
+    document.addEventListener("DOMContentLoaded", () => {
+      const imagenes = document.querySelectorAll(".galeria img");
+      const lightbox = document.querySelector(".lightbox");
+      const lightboxImg = document.querySelector(".lightbox img");
+
+      imagenes.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.style.display = "flex";
+          lightboxImg.src = img.src;
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Header / Navegación -->
+  <header>
+    <h1>Dark Realms</h1>
+    <p>Un MMORPG de fantasía medieval lleno de misterios</p>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/paginas/historia.html">Historia y Lore</a></li>
+        <li><a href="/paginas/clases.html">Clases</a></li>
+        <li><a href="/paginas/galeria.html">Galería</a></li>
+        <li><a href="/paginas/noticias.html">Noticias</a></li>
+        <li><a href="/paginas/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de Galería -->
+  <section>
+    <h2>Galería</h2>
+    <p style="max-width: 800px; text-align:justify;">
+      Explora un adelanto visual de los escenarios, personajes y momentos épicos que te esperan 
+      en los Reinos Oscuros. Haz clic en cualquier imagen para ampliar.
+    </p>
+
+    <div class="galeria" style="margin-top:30px;">
+      <img src="/img/c1-bosque-embrujado.webp" alt="Concept 1">
+      <img src="/img/c2-fortaleza-ruinas.webp" alt="Concept 2">
+      <img src="/img/c3-batalla-epica.webp" alt="Concept 3">
+      <img src="/img/c4-ciudad-medieval-oscura.webp" alt="Concept 4">
+      <img src="/img/c5-criatura-mitica-colosal.webp" alt="Concept 5">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <img src="" alt="Imagen Ampliada">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Dark Realms. Solo los valientes se atreven a ver más allá.</p>
+  </footer>
+
+</body>
+</html>
